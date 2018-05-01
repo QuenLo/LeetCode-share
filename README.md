@@ -1,2 +1,22 @@
-# leecode
-To share my experience in solving LeetCode problems.
+# LeeCode 
+[![Language python](https://img.shields.io/badge/python-2.7-blue.svg)](https://www.python.org)
+
+To share my experience in solving LeetCode problems.Also,it is mainly to help me for recording some ideas in the process of solving the problems and sort out the direction.
+Right now I am working on solve the problem with Python.I will start from easy part and continue to medium, hard.
+Maybe it will not update regularly,but I'll try my best.
+
+## Problems
+All from [LeetCode](https://leetcode.com).
+
+## Describe
+The description about how I solve those problems are in each article.
+Please check them on [GitBook](https://shenjie1993.gitbooks.io/leetcode-python/content/) or [CSDN](http://blog.csdn.net/column/details/leetcode-python.html).
+
+## Contact
+If there's any mistake please feel free to tell me from [here](https://github.com/QuenLo/leecode/issues/new).
+Or contact me with the email directly.
+email: quenlo510@gmail.com
+
+## Reference
+1. [leetcode-share](https://github.com/gavinfish/leetcode-share) by Jie Shen
+2. [leetcodeWithJS](https://github.com/skyyen999/leetcodeWithJS) by YangQY
