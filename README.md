@@ -22,5 +22,5 @@ email: quenlo510@gmail.com
 2. [leetcodeWithJS](https://github.com/skyyen999/leetcodeWithJS) by YangQY
 
 ## License
-[AFL-3.0 LICENSE](./LICENSE)
+[MIT LICENSE](./LICENSE)
 
