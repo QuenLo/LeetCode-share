@@ -1,4 +1,4 @@
-# LeeCode-Share
+# LeetCode-Share
 [![Language python](https://img.shields.io/badge/python-2.7-blue.svg)](https://www.python.org)
 
 To share my experience in solving LeetCode problems.Also,it is mainly to help me for recording some ideas in the process of solving the problems and sort out the direction.
