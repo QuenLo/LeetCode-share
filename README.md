@@ -1,4 +1,4 @@
-# LeeCode 
+# LeeCode-Share
 [![Language python](https://img.shields.io/badge/python-2.7-blue.svg)](https://www.python.org)
 
 To share my experience in solving LeetCode problems.Also,it is mainly to help me for recording some ideas in the process of solving the problems and sort out the direction.
@@ -20,3 +20,7 @@ email: quenlo510@gmail.com
 ## Reference
 1. [leetcode-share](https://github.com/gavinfish/leetcode-share) by Jie Shen
 2. [leetcodeWithJS](https://github.com/skyyen999/leetcodeWithJS) by YangQY
+
+## License
+[AFL-3.0 LICENSE](./LICENSE)
+
