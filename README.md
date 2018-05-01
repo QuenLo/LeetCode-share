@@ -10,11 +10,13 @@ All from [LeetCode](https://leetcode.com).
 
 ## Describe
 The description about how I solve those problems are in each article.
-Please check them on [GitBook](https://shenjie1993.gitbooks.io/leetcode-python/content/) or [CSDN](http://blog.csdn.net/column/details/leetcode-python.html).
+Please check them on [GitBook](https://leecode-share.gitbook.io/leecode-python/).
 
 ## Contact
 If there's any mistake please feel free to tell me from [here](https://github.com/QuenLo/leecode/issues/new).
+
 Or contact me with the email directly.
+
 email: quenlo510@gmail.com
 
 ## Reference
