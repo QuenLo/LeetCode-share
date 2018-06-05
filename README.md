@@ -12,6 +12,11 @@ All from [LeetCode](https://leetcode.com).
 The description about how I solve those problems are in each article.
 Please check them on [GitBook](https://leecode-share.gitbook.io/leecode-python/).
 
+Also,there're three of my colleague practice this object with me.
+- LeoHuang
+- MatthewLiu
+- DongeeWu
+
 ## Contact
 If there's any mistake please feel free to tell me from [here](https://github.com/QuenLo/leecode/issues/new).
 
