@@ -13,9 +13,9 @@ The description about how I solve those problems are in each article.
 Please check them on [GitBook](https://leecode-share.gitbook.io/leecode-python/).
 
 Also,there're three of my colleague practice this object with me.
-- LeoHuang
-- MatthewLiu
-- DongeeWu
+- [LeoHuang](https://github.com/HuangLiPang)
+- [MatthewLiu](https://github.com/MattWeiLiu)
+- [DongeeWu](https://github.com/brightdaylight)
 
 ## Contact
 If there's any mistake please feel free to tell me from [here](https://github.com/QuenLo/leecode/issues/new).
