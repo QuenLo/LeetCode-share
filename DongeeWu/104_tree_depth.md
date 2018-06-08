@@ -14,19 +14,21 @@ https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
 
 object Solution {
   def maxDepth(root: TreeNode): Int = {
-    if (root != null) search(root) // note that root can be null
-    else 0
+    search(root)
   }
 
   def search(node: TreeNode): Int = {
-    if (isLeaf(node)) 1
-    else if (node.left == null && node.right != null) search(node.right) + 1
-    else if (node.left != null && node.right == null) search(node.left) + 1
+    if (isEmpty(node)) 0 
+    else if (isLeaf(node)) 1
     else Math.max(search(node.right), search(node.left)) + 1
   }
 
   def isLeaf(node: TreeNode): Boolean = {
     node.left == null && node.right == null
+  }
+
+  def isEmpty(node: TreeNode): Boolean = {
+    node == null
   }
 }
 ```
