@@ -7,23 +7,10 @@
 
 class Solution(object):
  def maxDepth(self, root):     
-    if not root:
-     return 0
-
-    tmpstack = [root]
-    # for count depth
-    num = 0
-
-    while tmpstack:
-        nextL = []
     
-        while tmpstack:
-            top = tmpstack.pop()
-            if top.left:
-                nextL.append(top.left)
-            if top.right:
-                nextL.append(top.right)
-                
-        tmpstack = nextL
-        num += 1
-    return num
+    if not root:
+        return 0
+    
+    return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1
+    
+    
