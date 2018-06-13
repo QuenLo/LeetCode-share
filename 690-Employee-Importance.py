@@ -12,13 +12,13 @@ class Employee(object):
 """
 class Solution(object):
     def getImportance(self, employees, id):
-
-        for employee in employees:
-            if employee.id == id:
-                if employee.subordinates != []:
-                    for subordinate in employee.subordinates:
-                        employee.importance += self.getImportance(employees,subordinate)
-                    return employee.importance
-                return employee.importance
+        DictE = { employee.id:employee for employee in employees }
         
-        return 0
+        SelectL = [id]
+        Total = 0
+        while SelectL:
+            select = SelectL.pop()
+            Total += DictE[select].importance
+            for sub in DictE[select].subordinates:
+                SelectL.append(sub)
+        return Total
