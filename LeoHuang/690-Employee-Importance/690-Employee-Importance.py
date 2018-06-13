@@ -18,8 +18,8 @@ class Solution(object):
     :rtype: int
     """
     totalImportanceValue = 0
-		# sub_ids stores subordinates' ids
-		sub_ids = [id]
+    # sub_ids stores subordinates' ids
+    sub_ids = [id]
     idToEmployeesIndex = {}
     for i in range(len(employees)):
       idToEmployeesIndex[employees[i].id] = i
