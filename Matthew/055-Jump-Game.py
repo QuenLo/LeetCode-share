@@ -7,11 +7,13 @@ class Solution:
         max_Jump = 0
         for n in range(len(nums)):
             if nums[n] != 0:
-                if n + nums[n] > max_Jump:
-                    max_Jump = n + nums[n]
+                if n + nums[n] >= len(nums)-1:
+                    return True
+                tmp = self.checkzero(nums, n + nums[n])
+                max_Jump = max(tmp, max_Jump)
             else:
                 if max_Jump > n:
-                    n = max_Jump
+                    continue
                 elif max_Jump == n:
                     if max_Jump == len(nums)-1:
                         return True
@@ -20,3 +22,8 @@ class Solution:
                 else:
                     return False
         return True
+    def checkzero(self, nums, n):
+        if nums[n] != 0:
+            return n
+        else:
+            return self.checkzero(nums, n-1)
