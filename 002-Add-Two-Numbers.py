@@ -21,21 +21,14 @@ class Solution:
             l2 = l2.next
             Answer = Answer.next
             
-        # if l1 still have next node    
-        while l1:
-            carry, sumval = divmod( l1.val+carry, 10 )
+        # if l1 or l2 still have next node
+        tmplist = l1 or l2
+        while tmplist:
+            carry, sumval = divmod( tmplist.val+carry, 10 )
             Answer.next = ListNode( sumval )
             
             # to next node
-            l1 = l1.next
-            Answer = Answer.next
-                
-        while l2:
-            carry, sumval = divmod( l2.val+carry, 10 )
-            Answer.next = ListNode( sumval )
-            
-            # to next node
-            l2 = l2.next
+            tmplist = tmplist.next
             Answer = Answer.next
             
         if carry != 0:
