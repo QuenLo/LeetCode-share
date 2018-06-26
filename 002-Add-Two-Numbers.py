@@ -11,25 +11,35 @@ class Solution:
         StartAns = Answer = ListNode(0)
         carry = 0
         
-        #keep counting until there's no next node
-        while l1 or l2 or carry:
-            
-            v1 = v2 = 0
-            # the end or not
-            if l1 :
-                v1 = l1.val
-                l1 = l1.next
-            if l2 :
-                v2 = l2.val
-                l2 = l2.next
-            
-            SumNum = v1 + v2 + carry
-            carry, val = divmod(SumNum, 10)
-            # create next node with SunNum
-            Answer.next = ListNode( val )
+        # keep counting until one of nodes is end
+        while l1 and l2:
+            carry, sumval = divmod( l1.val+l2.val+carry, 10 )
+            Answer.next = ListNode( sumval )
             
             # to next node
+            l1 = l1.next
+            l2 = l2.next
             Answer = Answer.next
+            
+        # if l1 still have next node    
+        while l1:
+            carry, sumval = divmod( l1.val+carry, 10 )
+            Answer.next = ListNode( sumval )
+            
+            # to next node
+            l1 = l1.next
+            Answer = Answer.next
+                
+        while l2:
+            carry, sumval = divmod( l2.val+carry, 10 )
+            Answer.next = ListNode( sumval )
+            
+            # to next node
+            l2 = l2.next
+            Answer = Answer.next
+            
+        if carry != 0:
+            Answer.next = ListNode(carry)
         
         #return without the first one node
         return StartAns.next
