@@ -5,11 +5,12 @@ class Solution(object):
         sSet = set(s)
         sTable = []
         
-        #count letter -> sTable( 'key', num )
+        #count letter -> sTable( Count, key*Count )
         for key in sSet:
-            sTable.append( ( key, s.count(key) ) )
+            Count = s.count(key)
+            sTable.append( ( Count,  key*Count ) )
         
         #sort in descending
-        sTable.sort(key = lambda table: table[1], reverse = True)
+        sTable.sort(key = lambda table: table[0], reverse = True)
         
-        return ''.join( map( lambda table: table[0]*table[1], sTable) )
+        return ''.join( map( lambda table: table[1], sTable) )
