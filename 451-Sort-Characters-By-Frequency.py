@@ -1,11 +1,15 @@
-from collections import Counter
 class Solution(object):
     def frequencySort(self, s):
         
-        letterTuple = Counter(s).most_common()
-        AnswerStr = "" 
+        #unique key
+        sSet = set(s)
+        sTable = []
         
-        for key in letterTuple:
-            AnswerStr += key[0]*key[1]
-            
-        return AnswerStr
+        #count letter -> sTable( 'key', num )
+        for key in sSet:
+            sTable.append( ( key, s.count(key) ) )
+        
+        #sort in descending
+        sTable.sort(key = lambda table: table[1], reverse = True)
+        
+        return ''.join( map( lambda table: table[0]*table[1], sTable) )
