@@ -9,20 +9,9 @@ class Solution:
         skyline_Left = []
         RowLen = len(grid)
         ColLen = len(grid[0])
-        
-        for Row in range(0,RowLen):
-            Max = 0
-            for Col in range(0,ColLen):
-                Max = max(Max,grid[Row][Col])
-            skyline_Left.append(Max)
-        
-        
-        for Col in range(0,ColLen):
-            Max = 0
-            for Row in range(0,RowLen):
-                Max = max(Max,grid[Row][Col])    
-            skyline_Top.append(Max)
-        
+
+        skyline_Left = [max(Row) for Row in grid]
+        skyline_Top = [max(Col) for Col in zip(*grid)]
         
         #print(skyline_Left)
         #print(skyline_Top)
