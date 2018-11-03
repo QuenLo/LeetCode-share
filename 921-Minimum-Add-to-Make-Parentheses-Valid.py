@@ -1,15 +1,15 @@
 class Solution(object):
     def minAddToMakeValid(self, S):
 
-        Sstack = []
-        Wrong = []
+        Sstack = 0
+        Wrong = 0
         for s in S:
             if s == "(":
-                Sstack.append(s)
+                Sstack += 1
             elif s == ")":
-                if len(Sstack) < 1:
-                    Wrong.append(s)
+                if Sstack < 1:
+                    Wrong += 1
                 else:
-                    Sstack.pop()
+                    Sstack -= 1
         
-        return len(Sstack) + len(Wrong)
+        return Sstack + Wrong
