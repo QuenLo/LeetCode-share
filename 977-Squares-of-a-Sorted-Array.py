@@ -1,3 +1,14 @@
+# Time Complexity: O(NlogN), where N is the length of A.
+# Space Complexity: O(N)O(N).
+
+class SolutionIII:
+    def sortedSquares(self, A: List[int]) -> List[int]:
+        #B = [ a*a for a in A ]
+        #B.sort()
+        return sorted( [ a*a for a in A ] )
+
+
+
 # Space Complexity: O(N)
 # Time Complexity: O(N), where N is the length of A.
 
