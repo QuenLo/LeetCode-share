@@ -13,7 +13,7 @@ All from [LeetCode](https://leetcode.com).
 The description about how I solve those problems are in each article.
 Please check them on [GitBook](https://leecode-share.gitbook.io/leecode-python/).
 
-Also,there're three of my colleague practice this object with me.
+Also,there're 4 of my colleagues practice this object with me.
 - [LeoHuang](https://github.com/HuangLiPang)
 - [MatthewLiu](https://github.com/MattWeiLiu)
 - [DongeeWu](https://github.com/brightdaylight)
