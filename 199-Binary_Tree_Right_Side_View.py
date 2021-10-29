@@ -27,3 +27,21 @@ class Solution:
             output.append( row_collection[row][-1][1] )
             
         return output
+    
+class SolutionII:
+    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+        
+        if root is None:
+            return []
+        
+        rightside = []
+        
+        def dfs( node, level ):
+            if level == len(rightside):
+                rightside.append(node.val)
+            for child in [ node.right, node.left ]:
+                if child:
+                    dfs( child, level+1 )
+            
+        dfs(root, 0)
+        return rightside
