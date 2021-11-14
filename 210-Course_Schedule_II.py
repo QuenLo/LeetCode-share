@@ -29,3 +29,41 @@ class Solution:
                     
         return c_order if len(c_order) == numCourses else []
             
+class SolutionII:
+    def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
+        
+        # WHITE: 1, GRAY: 2, BLACK: 3
+        
+        course_col = collections.defaultdict(list)
+        
+        for nex, pre in prerequisites:
+            course_col[pre].append(nex)
+            
+        ans = []
+        is_possible = True
+        
+        state = { k: 1 for k in range(numCourses) }
+        
+        def dfs( c ):
+            nonlocal is_possible
+            
+            if not is_possible:
+                return
+            
+            state[c] = 2
+            if c in course_col:
+                for nex in course_col[c]:
+                    if state[nex] == 1:
+                        dfs( nex )
+                    elif state[nex] == 2:
+                        # is a cycle
+                        is_possible = False
+            
+            state[c] = 3
+            ans.append(c)
+            
+        for v in range(numCourses):
+            if state[v] == 1:
+                dfs(v)
+                
+        return ans[::-1] if is_possible else []
